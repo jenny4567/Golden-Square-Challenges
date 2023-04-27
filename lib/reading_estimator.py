@@ -5,8 +5,12 @@ def reading_estimator(filename):
         raise Exception("Filename should be a string.")
     if filename[-3:] != ".md":
         raise Exception("Filename does not correspond to text file.")
-    if exists("/Users/MakersAdmin/Documents/my_python_code/GoldSquareProjects/Golden_Square_Challenges/lib/" + filename):
-        text = open(filename).read()
-        print(text)
+    file = "/Users/MakersAdmin/Documents/my_python_code/GoldSquareProjects/Golden_Square_Challenges/lib/" + filename
+    if exists(file):
+        text = open(file).read()
+        #print(text)
+        num_words = len(text.split(" "))
+        time = round(num_words/200)
+        return f"Estimated time: {time} mins"
     else:
         raise Exception("Filename does not correspond to file in same folder.")

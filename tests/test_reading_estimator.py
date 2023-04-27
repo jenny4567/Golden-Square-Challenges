@@ -19,8 +19,8 @@ def test_file_is_in_folder():
     error_message = str(e.value)
     assert error_message == "Filename does not correspond to file in same folder." 
 
-# def test_filename_is_textfile():
-#     assert reading_estimator("test_text_file_long.md") != None
+def test_filename_is_textfile():
+    assert reading_estimator("test_text_file_long.md") != None
 
-# def test_estimated_reading_time_long():
-#     assert reading_estimator("test_text_file_long.md") == "Estimated time: 24 mins"
+def test_estimated_reading_time_long():
+    assert reading_estimator("test_text_file_long.md") == "Estimated time: 8 mins"
